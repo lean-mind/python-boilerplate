@@ -41,3 +41,8 @@ Flake
 ```bash
 pipenv run flake8 ./
 ```
+
+## References
+
+- [Intro to property-based testing in Python](https://www.freecodecamp.org/news/intro-to-property-based-testing-in-python-6321e0c2f8b/)
+- [Testing in Pandas](https://engineering.hexacta.com/testing-pandas-b65c0ea8a28e)
