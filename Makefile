@@ -17,5 +17,5 @@ lint:   ## Lint the project files
 	@PIPENV_VERBOSITY=-1 pipenv run flake8 ./
 
 .PHONY: tests
-test:  ## Locally run tests
+tests:  ## Locally run tests
 	@PYTHONPATH=src PIPENV_VERBOSITY=-1 pipenv run pytest -v tests/
