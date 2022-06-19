@@ -5,11 +5,10 @@ from src.narcissistic_number import is_narcissistic
 
 
 class TestIsNarcissisticNumber(TestCase):
-    def test_is_narcissistic_number_returns_false_given_not_a_narcissistic_one(self):
+    def test_is_narcissistic_if_the_sum_of_its_digits_to_the_nth_power_equal_the_original_number(self):
         assert_that(is_narcissistic(150)).is_false()
-
-    def test_is_narcissistic_returns_true_given_zero(self):
         assert_that(is_narcissistic(0)).is_true()
-
-    def test_is_narcissistic_number_returns_true_given_narcissistic_one(self):
         assert_that(is_narcissistic(153)).is_true()
+
+    def test_is_narcissistic_numbers_should_be_positive(self):
+        assert_that(is_narcissistic).raises(ValueError).when_called_with(-1)
