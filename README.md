@@ -2,7 +2,8 @@
 
 ## 📝 Setup project
 
-- ### [Setup python guide](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10)
+- ### [Setup Pipenv 0 errors version](https://www.wolfremium.dev/blog/python-multiple-versions)
+- ### [Windows 10](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10)
 
 - ### [Make manual](https://es.wikipedia.org/wiki/Make)
 
