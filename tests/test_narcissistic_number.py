@@ -10,5 +10,5 @@ class TestIsNarcissisticNumber(TestCase):
         assert_that(is_narcissistic(0)).is_true()
         assert_that(is_narcissistic(153)).is_true()
 
-    def test_is_narcissistic_numbers_should_be_positive(self):
+    def test_narcissistic_numbers_should_be_positive(self):
         assert_that(is_narcissistic).raises(ValueError).when_called_with(-1)
