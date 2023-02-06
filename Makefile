@@ -8,22 +8,27 @@ help:  ## Show this help
 		awk 'BEGIN {FS = ":.*?## "}; {printf "%-30s %s\n", $$1, $$2}'
 
 .PHONY: setup
-setup: .venv/lib  ## Install virtualenv dependencies, required for testing or regenerating the Pipfile.lock
+setup: .venv/lib  ## Install virtualenv dependencies
 	git config core.hooksPath scripts/hooks
 
 .PHONY: tests
 tests:  ## Locally run tests
 	$(PIPENV) clean
-	$(PIPENV_SAFE_RUN) pytest -n auto
+	$(PIPENV_SAFE_RUN) pytest --verbose
 
-.PHONY: pre-commit
-pre-commit: .venv/lib  ## Run pre-commit steps
-	$(PIPENV_SAFE_RUN) pre-commit run
+.PHONY: lint
+lint:   ## Lint the project files
+	@echo "🌑 Formatting with black"
+	@$(PIPENV) run black ./src
+	@echo "🕵 Check for errors with flake8"
+	@$(PIPENV) run flake8 ./
+	@echo "😋 Running isort"
+	@$(PIPENV) run isort --atomic .
 
-.PHONY: .clean-venv
-.clean-venv:
+.PHONY: clean
+clean: ## Removed venv files
 	$(PIPENV) --rm || true
-	$(PIPENV) --rm || true  # second run because two virtualenvs may exists, the local at .venv and the one at ~/.virtualenvs/
+	$(PIPENV) --rm || true  # two virtualenvs may exists, the local at .venv and the one at ~/.virtualenvs/
 
 .ONESHELL:
 .venv/lib: Pipfile.lock
