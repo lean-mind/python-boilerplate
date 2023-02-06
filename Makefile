@@ -9,7 +9,7 @@ help:  ## Show this help
 
 .PHONY: setup
 setup: .venv/lib  ## Install virtualenv dependencies
-	git config core.hooksPath scripts/hooks
+	@echo "✅ Setup it's done"
 
 .PHONY: tests
 tests:  ## Locally run tests
@@ -27,6 +27,7 @@ lint:   ## Lint the project files
 
 .PHONY: clean
 clean: ## Removed venv files
+	rm -rf .venv
 	$(PIPENV) --rm || true
 	$(PIPENV) --rm || true  # two virtualenvs may exists, the local at .venv and the one at ~/.virtualenvs/
 
