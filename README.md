@@ -1,31 +1,53 @@
 # 🐍 Python TDD Boilerplate
 
-## 📝 Setup project
+## 🧑‍🏭 Setup
 
-- ### [Setup Pipenv 0 errors version](https://www.wolfremium.dev/blog/python-multiple-versions)
-- ### [Windows 10](https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-windows-10)
+> [Pyenv](https://www.wolfremium.dev/blog/python-multiple-versions) >
+> [Makefile](https://hernandis.me/2017/03/20/como-hacer-un-makefile.html)
 
-- ### [Make](https://es.wikipedia.org/wiki/Make)
+After `pyenv` installation, run this in this directory:
 
-## 🗃️ Requirements
+```bash
+pyenv install 3.10.9
+```
 
-- Python 3.10
-- Pipenv
-- Make
+Set default Python version for current directory:
 
-## 🧑‍💻 Install project
+```bash
+pyenv local 3.10.9
+```
+
+Basic setup to use pipenv.
+
+```bash
+python -m pip install -U pip && pip install pipenv
+```
+
+This project includes make commands to make your life easier.
+
+```bash
+sudo apt-get install make
+```
+
+Install all the dependencies, and generates a virtual environment.
 
 ```bash
 make setup
 ```
 
-## ❓Help
+## 🧑‍💻 Commands
 
-```bash
-make help
-```
+Run `make help` to see all available commands.
 
-## 🧐 References
+## 🎯 TDD documentation
+
+- [TDD](./docs/tdd.md)
+- [Transformation Priority Premise (TPP)](./docs/tpp.md)
+- [Green bar Patterns](./docs/green-bar-patterns.md)
+- [Outside-in TDD](./docs/outside-in-tdd.md)
+- [Inside-out TDD](./docs/inside-out-tdd.md)
+
+## 📚 Testing libraries
 
 - [UnitTest](https://docs.python.org/3/library/unittest.html)
 - [Pytest](https://docs.pytest.org/en/7.1.x/getting-started.html#get-started)
@@ -34,5 +56,4 @@ make help
 
 ## 💩 Troubleshooting
 
-- [Setup of the project from 0](https://sourcery.ai/blog/python-best-practices/)
 - [Select VSCode Interpreter (modules not found after installation)](https://code.visualstudio.com/docs/python/environments#_select-and-activate-an-environment)
