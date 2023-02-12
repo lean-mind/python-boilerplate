@@ -2,7 +2,7 @@
 dumps/
 __pycache__
 .env
-.venv
+.venv/
 .python-version
 
 .pipenv-sync-date
