@@ -39,14 +39,6 @@ make setup
 
 Run `make help` to see all available commands.
 
-## 🎯 TDD documentation
-
-- [TDD](./docs/tdd.md)
-- [Transformation Priority Premise (TPP)](./docs/tpp.md)
-- [Green bar Patterns](./docs/green-bar-patterns.md)
-- [Outside-in TDD](./docs/outside-in-tdd.md)
-- [Inside-out TDD](./docs/inside-out-tdd.md)
-
 ## 📚 Testing libraries
 
 - [UnitTest](https://docs.python.org/3/library/unittest.html)
